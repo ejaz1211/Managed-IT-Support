@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Managed IT Support | UK IT Services — Premium Business IT</title>
+  <!-- Google Fonts for premium typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (free) for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fbfd;
+      color: #1A2B3C;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Premium colour palette & variables */
+    :root {
+      --navy: #0B1C2F;
+      --navy-light: #132B44;
+      --teal: #00A3A1;
+      --teal-dark: #008786;
+      --teal-glow: #00C2BF;
+      --gray-bg: #F2F5F9;
+      --card-white: #FFFFFF;
+      --text-dark: #0D1E2F;
+      --text-muted: #4A5C6E;
+      --border-light: #E2E9F0;
+      --shadow-sm: 0 6px 16px rgba(0, 20, 30, 0.05);
+      --shadow-md: 0 12px 32px rgba(0, 40, 50, 0.08);
+      --shadow-lg: 0 24px 48px rgba(0, 30, 40, 0.12);
+      --radius: 20px;
+      --radius-sm: 12px;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* ----- TYPOGRAPHY & LINKS ----- */
+    h1, h2, h3, h4 {
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--navy);
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.2s ease, background-color 0.2s ease;
+    }
+
+    /* Inline keyword link styling */
+    .keyword-link {
+      color: var(--teal-dark);
+      font-weight: 600;
+      border-bottom: 2px solid var(--teal);
+      padding-bottom: 2px;
+      transition: all 0.2s ease;
+    }
+
+    .keyword-link:hover {
+      color: var(--navy);
+      border-bottom-color: var(--navy);
+      background-color: rgba(0, 163, 161, 0.05);
+    }
+
+    /* ----- BUTTONS & INTERACTIVE ----- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 32px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    }
+
+    .btn-primary {
+      background-color: var(--teal);
+      color: white;
+      box-shadow: 0 8px 20px rgba(0, 163, 161, 0.25);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--teal-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(0, 163, 161, 0.35);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid var(--border-light);
+      color: var(--navy);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--teal);
+      background: rgba(0, 163, 161, 0.04);
+      transform: translateY(-2px);
+    }
+
+    /* ----- HEADER / NAVIGATION ----- */
+    .site-header {
+      padding: 24px 0;
+      background-color: var(--navy);
+      color: white;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: white;
+    }
+
+    .logo span {
+      color: var(--teal-glow);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .header-cta {
+      background-color: var(--teal);
+      padding: 10px 24px;
+      border-radius: 40px;
+      font-weight: 600;
+      color: white !important;
+      font-size: 0.95rem;
+    }
+
+    .header-cta:hover {
+      background-color: var(--teal-dark);
+    }
+
+    /* ----- HERO SECTION ----- */
+    .hero {
+      padding: 80px 0 60px;
+      background: linear-gradient(145deg, #F2F7FB 0%, #FFFFFF 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background-color: rgba(0, 163, 161, 0.1);
+      color: var(--teal-dark);
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.03em;
+      padding: 6px 16px;
+      border-radius: 40px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(0, 163, 161, 0.2);
+    }
+
+    .hero h1 {
+      margin-bottom: 24px;
+      color: var(--navy);
+    }
+
+    .hero h1 i {
+      color: var(--teal);
+      font-size: 2.8rem;
+      margin-right: 8px;
+    }
+
+    .hero-description {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      max-width: 620px;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    /* Highlighted keyword link in hero intro */
+    .hero-description a {
+      color: var(--teal-dark);
+      font-weight: 600;
+      border-bottom: 2px solid var(--teal);
+      padding-bottom: 2px;
+      transition: all 0.2s;
+    }
+
+    .hero-description a:hover {
+      color: var(--navy);
+      border-bottom-color: var(--navy);
+      background-color: rgba(0, 163, 161, 0.07);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 48px;
+    }
+
+    .stat-item h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .stat-item p {
+      color: var(--text-muted);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .hero-visual {
+      background: var(--card-white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      padding: 32px 24px;
+      border: 1px solid rgba(0, 0, 0, 0.02);
+      transform: perspective(1200px) rotateY(-2deg) rotateX(1deg);
+      transition: transform 0.4s ease;
+    }
+
+    .hero-visual:hover {
+      transform: perspective(1200px) rotateY(0deg) rotateX(0deg);
+    }
+
+    .visual-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .visual-header .dot {
+      display: flex;
+      gap: 8px;
+    }
+
+    .dot span {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #E2E9F0;
+    }
+
+    .dot span:first-child { background: #FF6B6B; }
+    .dot span:nth-child(2) { background: #FFD93D; }
+    .dot span:last-child { background: #6BCB77; }
+
+    .visual-header i {
+      color: var(--teal);
+      font-size: 1.2rem;
+    }
+
+    .visual-metric {
+      background: var(--gray-bg);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+
+    .metric-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .metric-row span:first-child {
+      font-weight: 500;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .metric-row span:last-child {
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .progress-bar {
+      height: 8px;
+      background: #E2E9F0;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 94%;
+      background: var(--teal);
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0, 163, 161, 0.4);
+    }
+
+    .badge-pro {
+      background: var(--teal);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 40px;
+      letter-spacing: 0.03em;
+    }
+
+    /* ----- TRUSTED BY / LOGOS ----- */
+    .trusted {
+      padding: 40px 0 32px;
+      background: var(--card-white);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .trusted p {
+      text-align: center;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      margin-bottom: 24px;
+    }
+
+    .logo-grid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 56px;
+      flex-wrap: wrap;
+      opacity: 0.7;
+    }
+
+    .logo-grid i {
+      font-size: 2.2rem;
+      color: #7F8C9A;
+      transition: color 0.2s;
+    }
+
+    .logo-grid i:hover {
+      color: var(--teal);
+    }
+
+    /* ----- INTRODUCTION / KEYWORD SECTION (middle of intro) ----- */
+    .intro-section {
+      padding: 80px 0;
+      background: var(--card-white);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .intro-content h2 {
+      font-size: 2.4rem;
+      margin-bottom: 28px;
+      letter-spacing: -0.02em;
+    }
+
+    .intro-content h2 i {
+      color: var(--teal);
+      margin-right: 12px;
+    }
+
+    .intro-text {
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      line-height: 1.7;
+      margin-bottom: 28px;
+      font-weight: 400;
+    }
+
+    .intro-text a {
+      color: var(--teal-dark);
+      font-weight: 600;
+      border-bottom: 2px solid var(--teal);
+      padding-bottom: 2px;
+      transition: all 0.2s;
+    }
+
+    .intro-text a:hover {
+      color: var(--navy);
+      border-bottom-color: var(--navy);
+      background-color: rgba(0, 163, 161, 0.05);
+    }
+
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 500;
+      color: var(--navy);
+    }
+
+    .feature-list i {
+      color: var(--teal);
+      font-size: 1.3rem;
+      width: 24px;
+    }
+
+    .intro-visual {
+      background: linear-gradient(145deg, var(--navy) 0%, var(--navy-light) 100%);
+      border-radius: var(--radius);
+      padding: 40px 32px;
+      color: white;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .intro-visual h3 {
+      color: white;
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+      font-weight: 600;
+    }
+
+    .intro-visual .quote-icon {
+      font-size: 2rem;
+      color: var(--teal-glow);
+      margin-bottom: 16px;
+      opacity: 0.8;
+    }
+
+    .intro-visual p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 32px;
+      font-style: italic;
+    }
+
+    .intro-visual .author {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .author-avatar {
+      width: 52px;
+      height: 52px;
+      background: var(--teal);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: white;
+      font-size: 1.4rem;
+    }
+
+    .author-info strong {
+      color: white;
+      font-weight: 600;
+      display: block;
+    }
+
+    .author-info span {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.9rem;
+    }
+
+    /* ----- SERVICES SECTION (PREMIUM CARDS) ----- */
+    .services-section {
+      padding: 80px 0;
+      background: var(--gray-bg);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 64px;
+    }
+
+    .section-header .subhead {
+      color: var(--teal-dark);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.85rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .section-header h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .service-card {
+      background: var(--card-white);
+      padding: 40px 32px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0, 0, 0, 0.02);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(0, 163, 161, 0.2);
+    }
+
+    .service-icon {
+      width: 64px;
+      height: 64px;
+      background: rgba(0, 163, 161, 0.08);
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+
+    .service-icon i {
+      font-size: 2rem;
+      color: var(--teal-dark);
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    .service-card p {
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+
+    .service-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      color: var(--teal-dark);
+      font-size: 0.95rem;
+      transition: gap 0.2s;
+    }
+
+    .service-link i {
+      font-size: 0.85rem;
+      transition: transform 0.2s;
+    }
+
+    .service-link:hover {
+      gap: 14px;
+      color: var(--navy);
+    }
+
+    .service-link:hover i {
+      transform: translateX(4px);
+    }
+
+    /* ----- CTA BANNER ----- */
+    .cta-banner {
+      padding: 80px 0;
+      background: linear-gradient(135deg, var(--navy) 0%, #1A324A 100%);
+      color: white;
+    }
+
+    .cta-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+
+    .cta-text h2 {
+      color: white;
+      font-size: 2.4rem;
+      margin-bottom: 12px;
+    }
+
+    .cta-text p {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn-white {
+      background: white;
+      color: var(--navy);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-white:hover {
+      background: #F0F7FF;
+      transform: translateY(-2px);
+    }
+
+    .btn-transparent {
+      background: transparent;
+      border: 1.5px solid rgba(255, 255, 255, 0.3);
+      color: white;
+    }
+
+    .btn-transparent:hover {
+      border-color: var(--teal-glow);
+      background: rgba(0, 194, 191, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* ----- FOOTER ----- */
+    .site-footer {
+      background: var(--navy);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 56px 0 32px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand .logo {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .footer-brand p {
+      max-width: 320px;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .footer-col h4 {
+      color: white;
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      letter-spacing: 0.02em;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .footer-col a {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer-col a:hover {
+      color: var(--teal-glow);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .social-links a {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 1.2rem;
+    }
+
+    .social-links a:hover {
+      color: var(--teal-glow);
+    }
+
+    /* Responsive design */
+    @media (max-width: 1024px) {
+      .hero-grid, .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .hero-visual {
+        transform: none;
+      }
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2.6rem; }
+      h2 { font-size: 2rem; }
+      .container { padding: 0 20px; }
+      .hero-stats { flex-wrap: wrap; gap: 24px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .cta-grid { flex-direction: column; text-align: center; }
+      .nav-links { display: none; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">UK<span>IT</span> Services</div>
+      <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="https://ukitservices.co.uk/it-support/" class="header-cta">Get Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge"><i class="fas fa-shield-alt" style="margin-right: 8px;"></i> UK's trusted managed IT partner</div>
+        <h1>Enterprise IT,<br>without the enterprise headache.</h1>
+        <!-- INTRODUCTION SECTION with mandatory keyword hyperlink -->
+        <p class="hero-description">
+          Experience seamless, proactive <a href="https://ukitservices.co.uk/it-support/" class="keyword-link" target="_blank" rel="noopener">Managed IT Support</a> tailored for UK businesses. 
+          We monitor, secure, and optimise your infrastructure 24/7 — so your team can focus on growth, not downtime. 
+          From London to Manchester, our UK-based experts deliver premium, responsive support.
+        </p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3>99.99%</h3>
+            <p>Uptime SLA</p>
+          </div>
+          <div class="stat-item">
+            <h3>24/7</h3>
+            <p>UK-based support</p>
+          </div>
+          <div class="stat-item">
+            <h3>500+</h3>
+            <p>Businesses protected</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-header">
+          <div class="dot"><span></span><span></span><span></span></div>
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <div class="visual-metric">
+          <div class="metric-row">
+            <span><i class="fas fa-shield" style="color: var(--teal); margin-right: 8px;"></i>System Health</span>
+            <span>94% <span class="badge-pro">Optimal</span></span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 94%;"></div>
+          </div>
+        </div>
+        <div class="visual-metric" style="background: #F9FBFD;">
+          <div class="metric-row">
+            <span><i class="fas fa-clock" style="color: var(--teal); margin-right: 8px;"></i>Response time</span>
+            <span>&lt; 8 min</span>
+          </div>
+        </div>
+        <div class="visual-metric" style="margin-bottom: 0; background: #F9FBFD;">
+          <div class="metric-row">
+            <span><i class="fas fa-check-circle" style="color: var(--teal); margin-right: 8px;"></i>Patches deployed</span>
+            <span>100%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trusted by / logos -->
+  <div class="trusted">
+    <div class="container">
+      <p>Trusted by forward-thinking UK organisations</p>
+      <div class="logo-grid">
+        <i class="fas fa-building"></i>
+        <i class="fas fa-chart-pie"></i>
+        <i class="fas fa-bolt"></i>
+        <i class="fas fa-cloud"></i>
+        <i class="fas fa-lock"></i>
+        <i class="fas fa-globe"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- MIDDLE INTRODUCTION SECTION – exact keyword hyperlink included again contextually -->
+  <section class="intro-section">
+    <div class="container intro-grid">
+      <div class="intro-content">
+        <h2><i class="fas fa-quote-left"></i> Proactive support, real results</h2>
+        <p class="intro-text">
+          At UK IT Services, we redefine <a href="https://ukitservices.co.uk/it-support/" class="keyword-link" target="_blank" rel="noopener">Managed IT Support</a> for the modern business. 
+          Our UK-based team combines advanced monitoring with human expertise to eliminate downtime, 
+          streamline operations, and secure your data — all for a predictable monthly fee. 
+          No jargon, no hidden costs. Just enterprise-grade IT, managed.
+        </p>
+        <ul class="feature-list">
+          <li><i class="fas fa-check-circle"></i> 24/7 remote & on-site support</li>
+          <li><i class="fas fa-check-circle"></i> Cyber security & compliance</li>
+          <li><i class="fas fa-check-circle"></i> Cloud & infrastructure management</li>
+          <li><i class="fas fa-check-circle"></i> Dedicated UK account manager</li>
+        </ul>
+      </div>
+      <div class="intro-visual">
+        <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+        <p>“Since switching to UK IT Services, our downtime has dropped to near zero. Their proactive managed IT support feels like having an in-house team — but better.”</p>
+        <div class="author">
+          <div class="author-avatar">JL</div>
+          <div class="author-info">
+            <strong>James Lawson</strong>
+            <span>CTO, FinTech Dynamics (London)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="subhead">What we do</span>
+        <h2>Premium managed services, built for UK business</h2>
+        <p>From day-to-day helpdesk to strategic IT roadmaps — we cover it all.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-headset"></i></div>
+          <h3>Helpdesk & Onsite</h3>
+          <p>Unlimited remote and on-site support with a 15-minute response SLA. Our UK-based engineers resolve issues fast.</p>
+          <a href="https://ukitservices.co.uk/it-support/" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-shield-virus"></i></div>
+          <h3>Cyber Security</h3>
+          <p>Endpoint protection, phishing simulations, and compliance with Cyber Essentials & GDPR — all managed for you.</p>
+          <a href="https://ukitservices.co.uk/it-support/" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+          <h3>Cloud & Backup</h3>
+          <p>Microsoft 365, Azure, and secure cloud backups with disaster recovery. Keep your data safe and accessible.</p>
+          <a href="https://ukitservices.co.uk/it-support/" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container cta-grid">
+      <div class="cta-text">
+        <h2>Ready to upgrade your IT?</h2>
+        <p>Get a free, no-obligation IT audit and see how our Managed IT Support can transform your business.</p>
+      </div>
+      <div class="cta-buttons">
+        <a href="https://ukitservices.co.uk/it-support/" class="btn btn-primary">Get started <i class="fas fa-arrow-right"></i></a>
+        <a href="#" class="btn btn-transparent">Speak to an expert</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">UK<span>IT</span> Services</div>
+          <p>Premium Managed IT Support for UK businesses. Proactive, secure, and always on.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Managed IT</a></li>
+            <li><a href="#">Cyber Security</a></li>
+            <li><a href="#">Cloud Solutions</a></li>
+            <li><a href="#">IT Consulting</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Case studies</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help centre</a></li>
+            <li><a href="#">System status</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 UK IT Services Ltd. All rights reserved. Registered in England & Wales.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
